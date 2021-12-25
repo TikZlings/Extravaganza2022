@@ -1,0 +1,19 @@
+\documentclass[tikz,border=3.14pt]{standalone} 
+\usepackage{tikzducks} 
+\newcommand{\CarLaTeX}{%
+ 	\raisebox{-10pt}{\scalebox{4.1}{C}}\hspace{-22pt}%
+ 	\raisebox{2pt}{\scalebox{.7}{A}}\raisebox{-1.8pt}{R}\LaTeX%
+    }
+\begin{document} 
+\begin{tikzpicture}
+\node[yshift=3.3cm,red]{\CarLaTeX};
+\node[yshift=2.55cm,blue, font=\small]{Prof.\ van Duck's assistant};
+\duck[body=yellow!50!brown!40!white,
+	crazyhair=gray!50!white,
+	eyebrow,
+	glasses=brown!70!black,
+	book=\scalebox{0.2}{\bfseries \TeX.SE},
+	bookcolour=red!20!brown]
+\duck[xscale=-1,squareglasses=blue!50!black,longhair=black]; 
+\end{tikzpicture} 
+\end{document}

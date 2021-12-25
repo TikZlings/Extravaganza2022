@@ -1,0 +1,23 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{tikzlings}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth]{example-image-duck}}
+
+\begin{document}
+	
+\begin{frame}
+  \begin{tikzpicture}[remember picture, overlay]
+
+    % some movement
+    \fill[red] (14-0.027*\thepage,0.007*\thepage) circle [radius=0.5];
+    
+    % credit for background image
+    \node[white,text width=.7\paperwidth,font=\tiny,align=center] at ([yshift=0.35cm]current page.south) {Image source: \url{xxx}};  
+    
+  \end{tikzpicture}
+  \pause[600]
+\end{frame}	
+	
+\end{document}

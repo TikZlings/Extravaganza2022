@@ -1,0 +1,27 @@
+\documentclass[
+aspectratio=169
+]{beamer}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{background canvas}{}
+
+\usepackage{pdfpages,tikz}
+
+\ifundef{\myrepeat}{\def\myrepeat{50}}{}
+
+\begin{document}
+
+\begin{frame}
+\begin{tikzpicture}[remember picture, overlay]
+
+\node at (current page.center) {\includegraphics[height=\paperheight]{\filename}};
+
+% snowflakes
+\node at ({5.4+sin(\thepage)},{28.8-0.0972*(\thepage+200)}) {\includegraphics[width=\paperwidth]{snowflakes}};
+
+% snowflakes
+\node at ({5.4+cos(\thepage)},{28.8-0.0972*(\thepage+200)}) {\includegraphics[width=\paperwidth,page=2]{snowflakes}};
+\end{tikzpicture}
+\pause[\myrepeat]
+\end{frame}
+
+\end{document}

@@ -1,0 +1,30 @@
+\documentclass[
+aspectratio=169
+]{beamer}
+
+\usepackage[osf]{AlegreyaSans}
+\usepackage{tikz}
+\usepackage{tikzlings}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{background canvas}{\includegraphics[height=\paperheight,width=\paperwidth]{extravaganza-intermission-background}}
+
+\ifundef{\mytitle}{\def\mytitle{placeholder}}{}
+
+\begin{document}
+\foreach \x in {1,...,75}{
+\begin{frame}
+\begin{tikzpicture}[remember picture, overlay]
+
+% snowflakes
+\node at ({5.4+sin(\thepage)},{28.8-0.0972*(\thepage+200)}) {\includegraphics[width=\paperwidth]{snowflakes}};
+
+% title
+\node[font=\bfseries\Huge\sffamily\scshape,text width=7.5cm,align=center] at ([yshift=-2cm]current page.center) {\mytitle};
+
+% snowflakes
+\node at ({5.4+cos(\thepage)},{28.8-0.0972*(\thepage+200)}) {\includegraphics[width=\paperwidth,page=2]{snowflakes}};
+\end{tikzpicture}
+\end{frame}
+}
+\end{document}

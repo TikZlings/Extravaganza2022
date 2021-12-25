@@ -1,0 +1,31 @@
+\documentclass[
+aspectratio=169
+]{beamer}
+
+\usepackage[osf]{AlegreyaSans}
+\usepackage{tikz}
+\usepackage{tikzlings}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{background canvas}{\includegraphics[height=\paperheight,width=\paperwidth]{extravaganza-intermission-background}}
+
+\begin{document}
+
+\begin{frame}[b]
+\begin{tikzpicture}[remember picture, overlay]
+
+% title
+\node[font=\bfseries\Huge\sffamily\scshape,text width=7.5cm,align=center] at (current page.center) {The \\Great \\ Tikzlings \\ Christmas \\Extravaganza \\ \the\year };
+\end{tikzpicture}
+
+\hspace*{3cm}\tikz[rotate=-20,scale=0.275]{\bat}
+
+\hfill\foreach\x in {bear,coati,koala,bee,marmot,moles,mouse,owl,squirrel,penguin,sloth,sheep,snowman,duck,cat,hippo,panda,pig,rhino,anteater,bug,elephant,chicken}{%
+\begin{tikzpicture}[scale=0.275]
+\csname \x\endcsname
+\end{tikzpicture}\hfill
+}%
+
+\end{frame}
+
+\end{document}
