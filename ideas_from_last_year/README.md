@@ -21,6 +21,8 @@ The full video is available from ...
 
 Some ideas for future scenes (just to make sure I don't forget them again...)
 
+- black and white silent film. \selectcolormodel{gray} and text messages between the frames
+
 - Sur le pont d'Avignon -> animate image from the Tikzlings Tour de France
 
 - Museum visit episode 3: 
