@@ -22,6 +22,12 @@
     % some movement
     \fill[red] (\thepage/600,1-\thepage/600) circle [radius=0.2cm];
     
+    % showing a couple of example coordinates
+    \node[anchor=south west] at (0,0) {(0,0)};
+    \node[anchor=south east] at (1,0) {(1,0)};
+    \node[anchor=north west] at (0,1) {(0,1)};
+    \node[anchor=north east] at (1,1) {(1,1)};
+    
     % credit for background image
     \node[white,text width=.7\paperwidth,font=\tiny,align=center] at ([yshift=0.35cm]current page.south) {Image source: \url{xxx}};  
     
