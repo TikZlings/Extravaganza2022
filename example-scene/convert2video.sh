@@ -2,13 +2,10 @@
 rm Example.mp4
 
 # convert to png images
-convert -density 240 Example.pdf Example.png
-
-# maybe worth a try for better image quality
-# pdftoppm -png -f 28 -l 28 -r 200 slides.pdf out
+pdftoppm -png -r 240 Example.pdf Example
 
 # convert to video
-ffmpeg  -ss 00:00:00 -i Example-%d.png -ss 00:00:00 -i Music.m4a -shortest Example_raw.mp4
+ffmpeg  -ss 00:00:00 -i Example-%03d.png -ss 00:00:00 -i Music.m4a -shortest Example_raw.mp4
 
 # repair video
 HandBrakeCLI --crop 0:0:0:0  -i Example_raw.mp4 -o Example.mp4
