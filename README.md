@@ -4,11 +4,11 @@ This repository contains the souce code of the Great TikZlings Extravanganza 202
 
 The full video is available from ...
 
-## title
+## Bear ante portas
 
 <img align="right" src="./samcarter/Bear_Ante_Portas/Bear_Ante_Portas.png" height="100">
 
-- Topic: Bear ante portas
+- Topic: Porta Nigra
 
 - Music: https://youtu.be/sH2X5ThSMlI
 
