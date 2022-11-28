@@ -4,12 +4,12 @@ This repository contains the souce code of the Great TikZlings Extravanganza 202
 
 The full video is available from ...
 
-## title
+## Bear ante portas
 
-<img align="right" src="./samcarter/folder/image.png" height="100">
+<img align="right" src="./samcarter/Bear_Ante_Portas/Bear_Ante_Portas.png" height="100">
 
-- Topic: ...
+- Topic: Porta Nigra
 
-- Music: ...
+- Music: https://youtu.be/sH2X5ThSMlI
 
-- Source Code: [./samcarter/folder/](https://github.com/samcarter/Extravaganza2021/tree/master/samcarter/folder)
+- Source Code: [./samcarter/Bear_Ante_Portas/](https://github.com/samcarter/Extravaganza2021/tree/master/samcarter/Bear_Ante_Portas)
