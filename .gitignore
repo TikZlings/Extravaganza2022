@@ -28,7 +28,7 @@ Thumbs.db
 *.synctex(busy)
 *.ind
 *.ilg
-
+*.synctex
 # derived files #
 #################
 *.pdf
