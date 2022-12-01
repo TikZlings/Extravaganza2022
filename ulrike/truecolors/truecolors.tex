@@ -1,10 +1,11 @@
 % !Mode:: "TeX:UTF-8:Main"
 \documentclass[aspectratio=169]{beamer}
 
-\usepackage{tikzlings}
+\usepackage{tikz}
+\usetikzlibrary{tikzlings,positioning}
 
 \setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{background canvas}{}
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth]{background}}
 
 % trick taken from https://topanswers.xyz/tex?q=1989
 \tikzset{
@@ -15,6 +16,7 @@
     },
 }
 
+\usepackage{pgfornament}
 \begin{document}
 	
 \begin{frame}
@@ -29,10 +31,20 @@
     \node[anchor=north west] at (0,1) {(0,1)};
     \node[anchor=north east] at (1,1) {(1,1)};
     
-    \node at (0.3,0.5){\includegraphics[width=4cm]{frame-bear-small}};
+    \node at (0.3,0.6) (bears){\includegraphics[width=4cm]{frame-bear-small}};
     
-    \begin{scope}[x=1cm,y=1cm,shift={(0.5,0.5)}]
-     \bear;
+    \node[fill=white] at (0.7,0.6) (bearcolor){\phantom{\includegraphics[width=4cm]{frame-bear-small}}};
+    \begin{scope}[x=1cm,y=1cm,shift={(0.6\textwidth,0\textheight)}]
+    % \path[red,draw](0,0)rectangle (5,5); 
+     \path(bearcolor.south)--++(0,0.5) pic[scale=1.5,bear/body=blue]{bear};
+ 
+ 	\draw[brown!80!black,line width=15pt] (bears.south east) rectangle (bears.north west);		
+	\draw[brown!60!black,line width=10pt] (bears.south east) rectangle (bears.north west);	
+	\draw[brown!80!black,line width=15pt] (bearcolor.south east) rectangle (bearcolor.north west);		
+	\draw[brown!60!black,line width=10pt] (bearcolor.south east) rectangle (bearcolor.north west);	
+ 
+     \pig[back,shift={(3,1)}];
+ 
     \end{scope} 
     
     % credit for background image
