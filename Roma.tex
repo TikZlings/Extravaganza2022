@@ -1,0 +1,185 @@
+% arara: pdflatex
+% arara: pdflatex
+\documentclass[aspectratio=169]{beamer}
+\usepackage{worldflags}
+
+\usepackage{tikzlings}
+\usetikzlibrary{shapes}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{positioning}
+
+\colorlet{darkbrown}{brown!40!black} 
+\colorlet{midbrown}{brown!70!black} 
+\colorlet{midlightbrown}{brown!70!white}
+\colorlet{lightbrown}{brown!40!white} 
+\definecolor{verdebandiera}{RGB}{0,140,69}
+\definecolor{biancobandiera}{RGB}{244,249,255}
+\definecolor{rossobandiera}{RGB}{205,33,42}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{background canvas}{
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=center, minimum height=\paperheight,
+  biancobandiera, fill=biancobandiera, minimum width=\paperwidth] 
+	at (current page.center) {};
+\node[anchor=west, minimum height=\paperheight,
+  verdebandiera, fill=verdebandiera, minimum width=1cm] at (current page.west) {};
+\node[anchor=east, minimum height=\paperheight,
+  rossobandiera, fill=rossobandiera, minimum width=1cm] at (current page.east) {};
+\node[anchor=center] at (current page.center) {\includegraphics[height=\paperheight,
+  width=\paperwidth, keepaspectratio
+	]{Monumento.jpg}};
+\end{tikzpicture}
+}
+
+% trick taken from https://topanswers.xyz/tex?q=1989
+\tikzset{
+    use page relative coordinates/.style={
+        shift={(current page.south west)},
+        x={(current page.south east)},
+        y={(current page.north west)}
+    },
+    suricatiup/.pic={
+        % body
+        \node[draw=midbrown, fill=brown, shape=ellipse, minimum width=6.5mm, minimum height=7mm] at (0,-1) (belly) {};   
+        \draw[brown, fill=midlightbrown] (0,-.2) to[out=-20, in=90] (.28,-.5) to[out=-90, in=45] (0,-1.1);
+        \draw[brown, fill=midlightbrown] (0,-.2) to[out=200, in=90] (-.28,-.5) to[out=-90, in=135] (0,-1.1);
+        % arms
+        \draw[brown, fill=midlightbrown] (-.25,-.5) to[out=-95, in
+        =90] (-.07,-1.1) to[out=-90, in=-90, looseness=5] (-.16,-1.1) to[out=90, in
+        =-95] (-.34,-.5) to[out=90, in
+        =-100] (-.18,-.2);
+        \draw[brown, fill=midlightbrown] (.25,-.5) to[out=-85, in
+        =90] (.07,-1.1) to[out=-90, in=-90, looseness=5] (.16,-1.1) to[out=90, in
+        =-85] (.34,-.5) to[out=90, in
+        =-100] (.18,-.2);
+        % chest
+        \draw[brown, fill=lightbrown] (0,-.3) to[out=0, in=90] (.25,-.5) to[out=-90, in=45] (0,-.9);
+        \draw[brown, fill=lightbrown] (0,-.3) to[out=180, in=90] (-.25,-.5) to[out=-90, in=135] (0,-.9);        
+        % tail
+        \draw[midbrown, fill=brown] (belly.south) to[bend right=5] (.3,-2) -- (.4,-1.97)  to[bend left=5] (belly.-65);
+        \draw[darkbrown, fill=darkbrown] (.75,-2.14) to[in=-70, out=180] (.3,-2) -- (.4,-1.97)  to[out=-55, in=170] (.75,-2.14);
+        % legs
+        \draw[midbrown, fill=brown, rounded corners=1] ([xshift=.1]belly.-160) to[out=-100, in=180] (-.15,-1.8) -- (-.1,-2.1) to[out=-160, in=-100, looseness=6] (-0.01,-2.1) -- (-0.01,-1.75)  to[out=135, in=-100] (belly.-97);
+        \draw[midbrown, fill=brown, rounded corners=1] ([xshift=-.1]belly.-20) to[out=-80, in=0] (.15,-1.8) -- (.1,-2.1) to[out=-20, in=-80, looseness=6] (0.01,-2.1) -- (0.01,-1.75)  to[out=45, in=-80] (belly.-83);
+        % ears
+        \node[circle, darkbrown, fill=darkbrown, inner sep=.8mm] (leftear) at (-0.32,0) {};
+        \node[circle, darkbrown, fill=darkbrown, inner sep=.8mm] at (0.32,0)  (rightear) {};
+        % face
+        \node[fill=brown, shape=ellipse, minimum width=6.3mm, minimum height=2mm] (facesup) at (0,.02) {};   
+        \draw[brown, fill=lightbrown] (0,-.16) ellipse (3.5mm and 2mm);
+        \begin{scope}
+         \clip (-.4,.2) rectangle (-.2,-.2);
+         \node[fill=brown, shape=ellipse, minimum width=6.3mm, minimum height=2mm] at (0,.02) {};
+        \end{scope}
+         \begin{scope}
+         \clip (.4,.2) rectangle (.2,-.2);
+         \node[fill=brown, shape=ellipse, minimum width=6.3mm, minimum height=2mm] at (0,.02) {};
+        \end{scope}
+        \draw[brown,fill=brown, rounded corners=1] (facesup.east) to[bend right=20] ([yshift=.5mm]facesup.north)  to[bend right=20] (facesup.west) -- cycle;
+        % eye bags
+        \node[circle, draw=midbrown, fill=midbrown, inner sep=.7mm, right =-.5mm of leftear] (leftbag) {};
+        \coordinate (leftbagpoint) at ([shift={(-.02,-.06)}]leftbag.-100);
+        \draw[midbrown, fill=midbrown, rounded corners=1] ([xshift=.1mm]leftbag.-150) -- (leftbagpoint) -- ([xshift=-.1mm]leftbag.-45);
+        \node[circle, draw=midbrown, fill=midbrown, inner sep=.7mm, left =-.5mm of rightear] (rightbag) {};
+        \coordinate (rightbagpoint) at ([shift={(.02,-.06)}]rightbag.-80);
+        \draw[midbrown, fill=midbrown, rounded corners=1] ([xshift=.1mm]rightbag.-140) -- (rightbagpoint) -- ([xshift=-.1mm]rightbag.-35);
+        % eyes
+        \node[circle, black, fill=black, inner sep=.4mm, right =.0mm of leftear] (lefteye) {};
+        \node[circle, black, fill=black, inner sep=.4mm, left =.0mm of rightear] (righteye) {};
+        % pupils
+        \node[circle, lightbrown, fill=lightbrown, inner sep=.15mm, right =.4mm of leftear] (leftpupil) {};
+        \node[circle, lightbrown, fill=lightbrown, inner sep=.15mm, left =.4mm of rightear] (rightpupil) {};
+        % nose
+        \node[regular polygon,regular polygon sides=3, rotate=-180, darkbrown, fill=darkbrown, inner sep=.25mm, rounded corners=1] at (0,-.21) (nose) {};
+        % mouth
+        \draw[darkbrown] ([yshift=.3mm]nose.north) to[bend right=60] ++(.14,0.03);
+        \draw[darkbrown] ([yshift=.3mm]nose.north) to[bend left=60] ++(-.14,0.03);
+				% flag
+				\node[scale=.3, rotate=-25] (ITflag) at (.7,-0.5) {\worldflag{IT}};
+				\draw[midbrown, line width=.6mm, shorten > = -6mm](ITflag.north west)--(ITflag.south west);    
+				},
+    suricatiseated/.pic={
+        % body
+        \node[draw=midbrown, fill=brown, shape=ellipse, minimum width=6.5mm, minimum height=7mm] at (0,-1) (belly) {};   
+        \draw[brown, fill=midlightbrown] (0,-.2) to[out=-20, in=90] (.28,-.5) to[out=-90, in=45] (0,-1.1);
+        \draw[brown, fill=midlightbrown] (0,-.2) to[out=200, in=90] (-.28,-.5) to[out=-90, in=135] (0,-1.1);
+        % arms
+        \draw[brown, fill=midlightbrown] (-.25,-.5) to[out=-95, in
+        =90] (-.07,-1.1) to[out=-90, in=-90, looseness=5] (-.16,-1.1) to[out=90, in
+        =-95] (-.34,-.5) to[out=90, in
+        =-100] (-.18,-.2);
+        \draw[brown, fill=midlightbrown] (.25,-.5) to[out=-85, in
+        =90] (.07,-1.1) to[out=-90, in=-90, looseness=5] (.16,-1.1) to[out=90, in
+        =-85] (.34,-.5) to[out=90, in
+        =-100] (.18,-.2);
+        % chest
+        \draw[brown, fill=lightbrown] (0,-.3) to[out=0, in=90] (.25,-.5) to[out=-90, in=45] (0,-.9);
+        \draw[brown, fill=lightbrown] (0,-.3) to[out=180, in=90] (-.25,-.5) to[out=-90, in=135] (0,-.9);        
+        % tail (seated)
+        \draw[midbrown, fill=brown] (belly.south) to[out=-90, in=160] (.31,-1.57) -- (.4,-1.47)  to[out=160, in=-90] (belly.-65);
+        \draw[darkbrown, fill=darkbrown] (.76,-1.58) to[in=-20, out=180] (.31,-1.57) -- (.4,-1.47)  to[out=-20, in=170] (.76,-1.58);
+        % legs (seated)
+        \draw[midbrown, fill=brown, rounded corners=1] ([xshift=1]belly.-160) to[out=100, in=0] (-.45,-1) to[out=180, in=110, bend right] (-.2,-1.5) -- (-.44,-1.5) to[out=-135, in=135] (-.44,-1.6) to[out=0, in=-90] (-.05,-1.5) --  (belly.-93);
+        \draw[midbrown, fill=brown, rounded corners=1] ([xshift=-1]belly.-20) to[out=80, in=180] (.45,-1) to[out=0, in=70, bend left] (.2,-1.5) -- (.44,-1.5) to[out=-45, in=45] (.44,-1.6) to[out=180, in=-90] (.05,-1.5) -- (belly.-87);
+        % ears
+        \node[circle, darkbrown, fill=darkbrown, inner sep=.8mm] (leftear) at (-0.32,0) {};
+        \node[circle, darkbrown, fill=darkbrown, inner sep=.8mm] at (0.32,0)  (rightear) {};
+        % face
+        \node[fill=brown, shape=ellipse, minimum width=6.3mm, minimum height=2mm] (facesup) at (0,.02) {};   
+        \draw[brown, fill=lightbrown] (0,-.16) ellipse (3.5mm and 2mm);
+        \begin{scope}
+         \clip (-.4,.2) rectangle (-.2,-.2);
+         \node[fill=brown, shape=ellipse, minimum width=6.3mm, minimum height=2mm] at (0,.02) {};
+        \end{scope}
+         \begin{scope}
+         \clip (.4,.2) rectangle (.2,-.2);
+         \node[fill=brown, shape=ellipse, minimum width=6.3mm, minimum height=2mm] at (0,.02) {};
+        \end{scope}
+        \draw[brown,fill=brown, rounded corners=1] (facesup.east) to[bend right=20] ([yshift=.5mm]facesup.north)  to[bend right=20] (facesup.west) -- cycle;
+        % eye bags
+        \node[circle, draw=midbrown, fill=midbrown, inner sep=.7mm, right =-.5mm of leftear] (leftbag) {};
+        \coordinate (leftbagpoint) at ([shift={(-.02,-.06)}]leftbag.-100);
+        \draw[midbrown, fill=midbrown, rounded corners=1] ([xshift=.1mm]leftbag.-150) -- (leftbagpoint) -- ([xshift=-.1mm]leftbag.-45);
+        \node[circle, draw=midbrown, fill=midbrown, inner sep=.7mm, left =-.5mm of rightear] (rightbag) {};
+        \coordinate (rightbagpoint) at ([shift={(.02,-.06)}]rightbag.-80);
+        \draw[midbrown, fill=midbrown, rounded corners=1] ([xshift=.1mm]rightbag.-140) -- (rightbagpoint) -- ([xshift=-.1mm]rightbag.-35);
+        % eyes
+        \node[circle, black, fill=black, inner sep=.4mm, right =.0mm of leftear] (lefteye) {};
+        \node[circle, black, fill=black, inner sep=.4mm, left =.0mm of rightear] (righteye) {};
+        % pupils
+        \node[circle, lightbrown, fill=lightbrown, inner sep=.15mm, right =.4mm of leftear] (leftpupil) {};
+        \node[circle, lightbrown, fill=lightbrown, inner sep=.15mm, left =.4mm of rightear] (rightpupil) {};
+        % nose
+        \node[regular polygon,regular polygon sides=3, rotate=-180, darkbrown, fill=darkbrown, inner sep=.25mm, rounded corners=1] at (0,-.21) (nose) {};
+        % mouth
+        \draw[darkbrown] ([yshift=.3mm]nose.north) to[bend right=60] ++(.14,0.03);
+        \draw[darkbrown] ([yshift=.3mm]nose.north) to[bend left=60] ++(-.14,0.03);
+				% flag
+				\node[scale=.3, rotate=-25] (ITflag) at (.7,-0.5) {\worldflag{IT}};
+				\draw[midbrown, line width=.6mm, shorten > = -6mm](ITflag.north west)--(ITflag.south west);    
+				}
+
+}
+
+
+
+\begin{document}
+	
+\begin{frame}
+  \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
+    % credit for background image
+    \node[font=\tiny, rotate=90, anchor=east] 
+		  at ([yshift=-0.1cm, xshift=1.8cm]current page.north west) 
+			{Image source: the Fischer's};  
+  \end{tikzpicture}
+  \begin{tikzpicture}[remember picture, overlay]
+    \pgfmathsetmacro{\pg}{\thepage+7-(int((\thepage+6)/7)*7)}
+    \foreach[count=\ind] \pos in {.5,2,6.5,8,...,12.5}
+			{\ifnumequal{\ind}{\pg}{\pic at (\pos,-2.85) {suricatiup};}{%			
+			  \pic at (\pos,-3.45) {suricatiseated};}}
+  \end{tikzpicture}
+ \pause[35]
+\end{frame}	
+	
+\end{document}
