@@ -1,0 +1,12 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{tikz}
+\usepackage{pdfpages}
+
+\begin{document}
+\foreach \x in {1,...,60}{
+\foreach \y in {1,...,13}{
+  \includepdf[pages=\x]{truecolors}  
+}  
+}
+\end{document}

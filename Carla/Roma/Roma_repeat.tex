@@ -1,0 +1,14 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{tikz}
+\usepackage{pdfpages}
+
+\begin{document}
+\foreach \z in {1,...,12}{
+\foreach \x in {1,...,7}{
+\foreach \y in {1,...,10}{
+  \includepdf[pages=\x]{Roma}  
+}  
+}
+}
+\end{document}
