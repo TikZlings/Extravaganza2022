@@ -35,3 +35,11 @@ The full video is available from ...
 - Music: https://archive.org/details/mv_Cyndi_Lauper_True_colors
 
 - Source Code: [./ulrike/truecolors/](https://github.com/TikZlings/Extravaganza2022/tree/main/ulrike/truecolors)
+
+## The city that never sleeps
+
+<img align="right" src="./ulrike/city-sleep/city-sleep.png" height="100">
+
+- Music: https://www.youtube.com/watch?v=cWc7vYjgnTs
+
+- Source Code: [./ulrike/city-sleep/](https://github.com/TikZlings/Extravaganza2022/tree/main/ulrike/city-sleep)
