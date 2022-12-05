@@ -1,3 +1,4 @@
+% !Mode:: "TeX:DE:UTF-8:Main"
 \documentclass[aspectratio=169]{beamer}
 
 \usepackage{tikzlings}
@@ -16,7 +17,14 @@
 \definecolor{sloth}{RGB}{137,126,88}
 
 \begin{document}
-	
+\ExplSyntaxOn
+\newcommand\slothhead
+ { 
+   \int_compare:nNnTF {\int_mod:nn {\xi}{7}}<{2}
+     {\includegraphics[width=1.6cm]{sloth_head} }
+     {\includegraphics[width=1.6cm]{sloth-mouth} }
+ }  
+\ExplSyntaxOff	
 \begin{frame}
   \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
 
@@ -30,10 +38,10 @@
 %    \node[anchor=north east] at (1,1) {(1,1)};
 %    
     % credit for background image
-    \node[white,text width=.7\paperwidth,font=\tiny,align=center] at ([yshift=0.35cm]current page.south) {Image source: \url{xxx}};  
+    \node[white,text width=.7\paperwidth,font=\tiny,align=center] at ([yshift=0.35cm]current page.south) {Image source: \url{https://commons.wikimedia.org/wiki/File:Nightfall_on_13th_Street_(51246144554).jpg}};  
  
   \begin{scope}[x=1cm,y=1cm,shift={(-1cm,0.98\textheight)}]  
- \foreach \x in %{1} {
+ \foreach \x [count=\xi] in %{1} {
  {1,0.995,...,0}{%
 
 	%Body of the sloth
@@ -51,8 +59,8 @@
 	(7.177, -0.504) -- cycle;
 
 	% Head
-	\node<.>[rotate=-55+\x*25] at (10.3, -1.7) {\includegraphics[width=1.6cm]{sloth_head}};	
-	
+	\node<.>    at(10.3, -1.7) 
+     {\slothhead };	
 	% front paw	
 	\fill<.>[sloth!40!black,rotate around={10+\x*22:(9.6,-2.5)}] (9.84, 0.02-\x*0.33) ellipse (0.06 and 0.18);
 	\fill<.>[sloth!40!black,rotate around={0+\x*22:(9.6,-2.5)}] (9.55+\x*0.05, 0.05-\x*0.35) ellipse (0.06 and 0.18);
