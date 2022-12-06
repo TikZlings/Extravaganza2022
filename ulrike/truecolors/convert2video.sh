@@ -15,4 +15,4 @@ rm truecolors-*.png
 rm truecolors_raw.mp4
 
 # view :)
-# open truecolors.mp4
+open truecolors.mp4

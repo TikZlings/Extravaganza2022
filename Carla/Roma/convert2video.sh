@@ -15,4 +15,4 @@ rm Roma-*.png
 rm Roma_raw.mp4
 
 # view :)
-# open Roma.mp4
+open Roma.mp4
