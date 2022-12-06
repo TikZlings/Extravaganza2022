@@ -1,0 +1,48 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{tikzlings}
+\usetikzlibrary{calc,decorations.markings}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth]{m8_sherick_big}}
+
+% trick taken from https://topanswers.xyz/tex?q=1989
+\tikzset{
+    use page relative coordinates/.style={
+        shift={(current page.south west)},
+        x={(current page.south east)},
+        y={(current page.north west)}
+    },
+}
+
+\begin{document}
+	
+\begin{frame}
+  \begin{tikzpicture}[remember picture, overlay,use page relative coordinates]
+    % credit for background image
+    \node[white,text width=.7\paperwidth,font=\tiny,align=center] at ([yshift=0.35cm]current page.south) {Image source: \url{https://apod.nasa.gov/apod/image/0508/m8_sherick_big.jpg}};  
+  \end{tikzpicture}
+
+  % from https://topanswers.xyz/tex?q=387#a394
+  \begin{tikzpicture}[
+    yshift=5cm,
+    remember picture,
+    overlay,
+    decoration={
+      markings, 
+      mark=at position \thepage/600 with {
+        \path (-0.1cm,0) coordinate (aux0) (0.1cm,0) coordinate(aux1)
+		(0,0) coordinate(aux2);
+		\pgftransformreset
+		\path let \p1=($(aux1)-(aux0)$), \n1={atan2(\y1,\x1)} in 
+		(aux2) node[rotate=-10]{\includegraphics[width=2cm]{pig}};
+      }
+    }
+  ]
+    \path[postaction=decorate] (-0.0024, -0.846) .. controls (2.9731, -2.564) and (4.9397, -0.8115) .. (4.9397, -4.2473) .. controls (4.9397, -8.2498) and (-2.9933, -2.7915) .. (0.9993, -3.0728) .. controls (10.1424, -3.7168) and (9.4455, -9.435) .. (6.1477, -7.1566) .. controls (3.4609, -5.3004) and (10.1189, 2.4134) .. (13.8065, -10.4522);
+  \end{tikzpicture}%
+\pause[600]
+
+\end{frame}	
+	
+\end{document}

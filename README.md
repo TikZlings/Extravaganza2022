@@ -50,7 +50,7 @@ The full video is available from ...
 
 - Music: https://www.youtube.com/watch?v=1oofM5ttD6c
 
-- Source Code: [./samcarter/smurfs/](https://github.com/TikZlings/Extravaganza2022/tree/main/samcarter/smurfs)- Source Code: [./samcarter/smurfs/](https://github.com/TikZlings/Extravaganza2022/tree/main/samcarter/smurfs)
+- Source Code: [./samcarter/smurfs/](https://github.com/TikZlings/Extravaganza2022/tree/main/samcarter/smurfs)
 
 ## Classic graffiti
 
@@ -59,3 +59,11 @@ The full video is available from ...
 - Music: https://commons.wikimedia.org/wiki/File:Richard_Strauss_Don_Juan_excerpt.mp3 and  https://www.freesoundslibrary.com/traffic-noise-sound-effect/
 
 - Source Code: [./samcarter/graffiti/](https://github.com/TikZlings/Extravaganza2022/tree/main/samcarter/graffiti)
+
+## Space
+
+<img align="right" src="./samcarter/space/space.png" height="100">
+
+- Music: https://www.freesoundslibrary.com/space-ambience-portal-to-the-stars/
+
+- Source Code: [./samcarter/space/](https://github.com/TikZlings/Extravaganza2022/tree/main/samcarter/space)
