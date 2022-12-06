@@ -1,0 +1,12 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{tikz}
+\usepackage{pdfpages}
+
+\begin{document}
+\foreach \x in {1,...,67}{
+\foreach \y in {1,...,12}{
+  \includepdf[pages=\x]{city-sleep}  
+}  
+}
+\end{document}
