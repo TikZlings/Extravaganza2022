@@ -43,3 +43,11 @@ The full video is available from ...
 - Music: https://www.youtube.com/watch?v=cWc7vYjgnTs
 
 - Source Code: [./ulrike/city-sleep/](https://github.com/TikZlings/Extravaganza2022/tree/main/ulrike/city-sleep)
+
+## Tribute to Vader Abraham (1935-2022)
+
+<img align="right" src="./samcarter/smurfs/smurfs.png" height="100">
+
+- Music: https://www.youtube.com/watch?v=1oofM5ttD6c
+
+- Source Code: [./samcarter/smurfs/](https://github.com/TikZlings/Extravaganza2022/tree/main/samcarter/smurfs)
