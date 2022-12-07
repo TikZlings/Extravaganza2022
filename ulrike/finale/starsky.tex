@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{papersize={160mm,90mm},margin=0cm} %\textwidth=11.8, \textheight=8.6
+\usepackage[x11names]{xcolor}
+\usepackage{tikzducks,eso-pic}
+\usetikzlibrary{shapes.geometric}
+\pagestyle{empty}
+\parindent=0pt
+
+\tikzstyle{witchstars}=[star, star points=5, star point ratio=2.25, draw,inner sep=1.3pt,anchor=outer point 3]
+
+\makeatletter
+\newcommand{\mystar}{%
+    \pgfmathsetmacro\xposition{16*rnd}
+    \pgfmathsetmacro\yposition{9*rnd}
+    \pgfmathsetmacro\starsize{0.3+1.1*rnd}
+    \pgfmathsetmacro\starcolor{random(10,75)}
+    \ifodd\c@page
+    \node[witchstars,fill=yellow!\starcolor!white,inner sep=\starsize pt] at (\xposition,\yposition) {};
+    \else
+    \node[witchstars,fill=white!\starcolor!yellow,inner sep=\starsize pt] at (\xposition,\yposition) {};
+    \fi
+    }
+\makeatother
+
+
+\begin{document}
+\AddToShipoutPictureBG{%
+ \AtPageLowerLeft{%
+ \begin{tikzpicture}[overlay,remember picture]
+ \fill[DeepSkyBlue3] (0,0) rectangle (\paperwidth,\paperheight);
+ \pgfmathsetseed{2}
+ \foreach \x in {1,2,...,100}{\mystar}
+ \end{tikzpicture}}}
+
+\ExplSyntaxOn \int_step_inline:nn{15}{\mbox{}\newpage} \ExplSyntaxOff 
+\end{document}

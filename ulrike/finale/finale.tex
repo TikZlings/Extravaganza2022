@@ -5,99 +5,137 @@
 \PassOptionsToPackage{x11names,svgnames}{xcolor}
 \documentclass[aspectratio=169]{beamer}
 \usepackage[T1]{fontenc}
-
+\setbeamertemplate{navigation symbols}{}
 \usepackage{tikzducks}
-\usepackage{scsnowman}
 \usepackage{tikzpeople,eso-pic,tikzlings,xfp}
-\usetikzlibrary{shadings}
+%\usetikzlibrary{shadings}
 \pagestyle{empty}
 \parindent=0pt
 \definecolor{pskin}{RGB}{255,200,184}%
 \definecolor{phair}{RGB}{249,249,139}%
 \definecolor{mggreen}{RGB}{37,166,89}
 \colorlet{spotgray}{gray!90!white}% local need
+\newcommand\innerscalefactor{0.8}
+\newcommand\outerscalefactor{0.3}
 \tikzset{
   210duck/.pic = {
-   \begin{scope}[scale=0.8,transform shape]
-     \marmot;
+   \begin{scope}[scale=\innerscalefactor,transform shape]
+     \marmot
   \end{scope}},
   30duck/.pic = {
-   \begin{scope}[scale=0.8,transform shape]
-    \bear;
+   \begin{scope}[scale=\innerscalefactor,transform shape]
+    \bear
   \end{scope}},
  60duck/.pic =
   {
-   \begin{scope}[scale=0.8,transform shape]
-   \owl;
+   \begin{scope}[scale=\innerscalefactor,transform shape]
+   \owl
    \end{scope}},
  90duck/.pic =
   {
-   \begin{scope}[scale=0.8,transform shape]
-   \moles;
+   \begin{scope}[scale=\innerscalefactor,transform shape]
+   \moles
    \end{scope}},
   120duck/.pic=
    {
-    \begin{scope}[scale=0.8,transform shape]
-    \coati;
+    \begin{scope}[scale=\innerscalefactor,transform shape]
+    \coati
    \end{scope}
   },
    150duck/.pic=
    {
-    \begin{scope}[xshift=-0.8cm,scale=0.8,transform shape]
-    \duck[santa=red!80!black, jacket=red!80!gray, tshirt=white,beard=white!80!brown,body=LightGoldenrod2!70!RosyBrown1]
+    \begin{scope}[scale=\innerscalefactor ,transform shape]
+    \sheep
+%\duck[santa=red!80!black, jacket=red!80!gray, tshirt=white,beard=white!80!brown,body=LightGoldenrod2!70!RosyBrown1]
     \end{scope}
     },
   180duck/.pic=
   {
-   \begin{scope}[scale=0.8,transform shape]
-   \koala;
+   \begin{scope}[scale=\innerscalefactor ,transform shape]
+   \koala
    \end{scope}
   },
   330duck/.pic=
   {
-   \begin{scope}[xshift=-0.8cm,scale=0.8,transform shape]
-    \begin{scope}[xshift=-0.2cm,scale=0.3,overlay]
-    \fill[white]
-     plot[variable=\x,domain=0:360,samples=72]
-     ({4.8+\x/90},{6.75+0.2*cos(\x/(1+abs(0.1*(10))))})
-     --
-     plot[variable=\x,domain=0:360,samples=72]
-    ({4.8+(360-\x)/90},{4.75+0.2*cos((360-\x)/(1+abs(0.1*(10))))})
-    --cycle;
-    \fill[red]
-     plot[variable=\x,domain=0:360,samples=72]
-     ({4.8+\x/90},{5.90+0.2*cos(\x/(1+abs(0.1*(10))))})
-     --
-     plot[variable=\x,domain=0:360,samples=72]
-    ({4.8+(360-\x)/90},{5.60+0.2*cos((360-\x)/(1+abs(0.1*(10))))})
-     -- cycle;
-     \fill[red]
-     plot[variable=\x,domain=160:200,samples=72]
-     ({4.8+\x/90},{6.75+0.2*cos(\x/(1+abs(0.1*(10))))})
-    --
-    plot[variable=\x,domain=160:200,samples=72]
-   ({4.8+(360-\x)/90},{4.75+0.2*cos((360-\x)/(1+abs(0.1*(10))))})
-    -- cycle;
-     \fill[left color=gray, right color=gray,middle color=gray!50!white] ([xshift=-1mm]4.8,7.0)--++ (0,-4.8)--++(2mm,0)--++(0,4.8)--cycle;
-   \end{scope}
-   \duck
+   \begin{scope}[scale=\innerscalefactor ,transform shape]
+   \elephant
    \end{scope}
   },
   240duck/.pic= {
-   \begin{scope}[scale=0.75,transform shape]
-   \mouse\end{scope}} ,
-  270duck/.pic= {\begin{scope}[scale=0.8,transform shape]\snowman;\end{scope}} ,
+   \begin{scope}[scale=\fpeval{0.75/0.8*\innerscalefactor},transform shape]
+   \pig\end{scope}} ,
+  270duck/.pic= {\begin{scope}[scale=\innerscalefactor ,transform shape]
+  \snowman\end{scope}} ,
   300duck/.pic =
    {
-   \begin{scope}[scale=0.8,transform shape]
-  \penguin
+   \begin{scope}[scale=\innerscalefactor ,transform shape]
+  \panda
     \end{scope}
    },
-   0duck/.pic = {\begin{scope}[scale=0.8,transform shape]
-  \sloth
+   0duck/.pic = {\begin{scope}[scale=\innerscalefactor ,transform shape]
+  \rhino
     \end{scope}},
   }
 
+\tikzset{
+  210outer/.pic = {
+   \begin{scope}[scale=\outerscalefactor ,transform shape]
+     \bee
+  \end{scope}},
+  30outer/.pic = {
+   \begin{scope}[scale=\outerscalefactor ,transform shape]
+    \cat
+  \end{scope}},
+ 60outer/.pic =
+  {
+   \begin{scope}[scale=\outerscalefactor ,transform shape]
+   \bat
+   \end{scope}},
+ 90outer/.pic =
+  {
+   \begin{scope}[scale=\outerscalefactor ,transform shape]
+   \chicken
+   \end{scope}},
+  120outer/.pic=
+   {
+    \begin{scope}[scale=\outerscalefactor ,transform shape]
+    \bug
+   \end{scope}
+  },
+   150outer/.pic=
+   {
+    \begin{scope}[scale=\outerscalefactor ,transform shape]
+    \anteater
+%\duck[santa=red!80!black, jacket=red!80!gray, tshirt=white,beard=white!80!brown,body=LightGoldenrod2!70!RosyBrown1]
+    \end{scope}
+    },
+  180outer/.pic=
+  {
+   \begin{scope}[scale=\outerscalefactor ,transform shape]
+   \hippo
+   \end{scope}
+  },
+  330outer/.pic=
+  {
+   \begin{scope}[scale=\outerscalefactor ,transform shape]
+   \squirrel
+   \end{scope}
+  },
+  240outer/.pic= {
+   \begin{scope}[scale=\fpeval{0.75/0.8*\outerscalefactor},transform shape]
+   \mouse\end{scope}} ,
+  270outer/.pic= 
+   {\begin{scope}[scale=\outerscalefactor ,transform shape]\wolf\end{scope}} ,
+  300outer/.pic =
+   {
+   \begin{scope}[scale=\outerscalefactor ,transform shape]
+  \penguin
+    \end{scope}
+   },
+   0outer/.pic = {\begin{scope}[scale=\outerscalefactor ,transform shape]
+  \sloth
+    \end{scope}},
+  }
 
 
 \colorlet{treecolor}{LawnGreen!50!black}
@@ -125,6 +163,14 @@
 	\end{scope}
     \end{scope}}
 }
+\setbeamertemplate{background canvas}{}
+
+\ExplSyntaxOn 
+\AddToShipoutPictureBG{%
+ \AtPageLowerLeft{%
+\includegraphics[page=\int_eval:n{\int_mod:nn{\value{page}}{10}+1}]{starsky}}} 
+\ExplSyntaxOff   
+
 \begin{document}
 %\AddToShipoutPictureBG{%
 % \AtPageLowerLeft{%
@@ -137,9 +183,11 @@
 %% \path ([xshift=-1cm,yshift=0.5cm]current page.south east) pic {tree};
 % \end{tikzpicture}}}
 \foreach \x in 
- {0}% test
- %{0,2,...,360} %355
+ %{0,2}
+ %{0,2,...,50}% test
+ {0,2,...,360} %355
 {%
+\edef\outerscalefactor{\fpeval{0.3+0.7/360*\x}}
 \begin{tikzpicture}
 
 \path (0,0) rectangle (\textwidth,\textheight);
@@ -150,16 +198,22 @@
 %=5] \duckpathcrown;
 %
 \coordinate (mycenter) at (0.5\textwidth,0.4\textheight);
-\node[draw,anchor=center] at ([yshift=1cm]mycenter){\includegraphics{weltumarmt}};
 %\draw[fill=red] ([yshift=1cm]mycenter) circle (4pt); 
 %%\draw ([yshift=0.2cm,xshift=0.2cm]wing) circle (3cm);
 %\end{scope}
 
-  \foreach \y in {0,30,...,330}%
+
+ \foreach \y in {0,30,...,330}%
  {
-  \path[overlay] (mycenter) --+(\x+\y:3.5) pic { \y duck };
+  \path[overlay] (mycenter) --+(\x+\y:\fpeval{1.5+1/90*\x}) pic { \y outer };
  }
 
+\node[anchor=center] at ([yshift=1cm]mycenter){\includegraphics{weltumarmt}};
+
+\foreach \y in {0,30,...,330}%
+ {
+  \path[overlay] (mycenter) --+(\x+\y:3) pic { \y duck };
+ }
 
 %\draw(0,0)--(mycenter);
 \end{tikzpicture}\newpage
