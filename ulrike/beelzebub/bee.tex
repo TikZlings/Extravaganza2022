@@ -1,0 +1,26 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows.meta}
+\usepackage{tikzlings}
+\begin{document}
+\newcommand{\fork}[1]{%
+\coordinate (forkpos) at ([xshift={#1}]0.07,0.2); 
+\draw[-Stealth, line width=1.6pt,] (forkpos) -- ++(-2.5,0); 
+\draw[Stealth-Stealth, line width=1.6pt,] ([shift={(-2.3,.3)}]forkpos) -- ++(.6,0) to[bend left]  ++(0,-.6) -- ++(-.6,0);%
+}
+\begin{tikzpicture}
+
+\bee[body=red,stripes=black,wings=black]
+%\fill[brown!80!black,rotate around={-23:(0.11, 0.8)}] (0.07,0.2) rectangle ++(0.1,1.8);
+\begin{scope}[shift={(0.05,1)}]
+\begin{scope}[rotate=240]
+\fork{0}
+\end{scope}
+\end{scope}
+%\draw[line width=3pt,brown!80!black,rotate around={-23:(0.11, 0.8)}] (0.14,2) parabola ++ (-0.3,0.8);
+%\draw[line width=0.4pt,brown!80!black,rotate around={-23:(0.11, 0.8)}->] (-0.16,2.8)--++(0,0.3);
+%
+%\draw[line width=3pt,brown!80!black,rotate around={-23:(0.11, 0.8)}] (0.14,2) parabola ++ (0.3,0.8);
+%\draw[line width=3pt,brown!80!black,rotate around={-23:(0.11, 0.8)}] (0.14,2) -- ++ (0,0.8);
+
+\end{tikzpicture}
+\end{document}
