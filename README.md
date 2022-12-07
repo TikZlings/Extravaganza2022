@@ -56,7 +56,7 @@ The full video is available from ...
 
 <img align="right" src="./samcarter/graffiti/graffiti.png" height="100">
 
-- Music: https://commons.wikimedia.org/wiki/File:Richard_Strauss_Don_Juan_excerpt.mp3 and  https://www.freesoundslibrary.com/traffic-noise-sound-effect/
+- Music: https://commons.wikimedia.org/wiki/File:Richard_Strauss_Don_Juan_excerpt.mp3 and  https://www.freesoundslibrary.com/footsteps-on-pebbles-sound-effect/
 
 - Source Code: [./samcarter/graffiti/](https://github.com/TikZlings/Extravaganza2022/tree/main/samcarter/graffiti)
 
