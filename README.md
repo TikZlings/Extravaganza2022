@@ -4,7 +4,7 @@ This repository contains the souce code of the Great TikZlings Extravanganza 202
 
 The full video is available from ...
 
-## Bear ante portas
+## SPQR
 
 <img align="right" src="./samcarter/Bear_Ante_Portas/Bear_Ante_Portas.png" height="100">
 
@@ -52,7 +52,7 @@ The full video is available from ...
 
 - Source Code: [./samcarter/smurfs/](https://github.com/TikZlings/Extravaganza2022/tree/main/samcarter/smurfs)
 
-## Classic graffiti
+## Bring on the Music
 
 <img align="right" src="./samcarter/graffiti/graffiti.png" height="100">
 
