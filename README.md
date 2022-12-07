@@ -60,7 +60,7 @@ The full video is available from ...
 
 - Source Code: [./samcarter/graffiti/](https://github.com/TikZlings/Extravaganza2022/tree/main/samcarter/graffiti)
 
-## Space
+## Pig in Space
 
 <img align="right" src="./samcarter/space/space.png" height="100">
 
