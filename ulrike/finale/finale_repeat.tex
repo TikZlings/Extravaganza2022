@@ -1,0 +1,13 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{tikz}
+\usepackage{pdfpages}
+\setbeamertemplate{navigation symbols}{}
+
+\begin{document}
+\foreach \x in {1,...,361}{
+\foreach \y in {1,...,2}{
+  \includepdf[pages=\x]{finale}  
+}  
+}
+\end{document}
