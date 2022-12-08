@@ -13,10 +13,11 @@ convert2video(){
     rm $1.mp4
 
     # convert to png images
-    convert -density 160 extravaganza-intermission-$1.pdf $1.png
+    # convert -density 160 extravaganza-intermission-$1.pdf $1.png
+    pdftoppm -png -r 240 extravaganza-intermission-$1.pdf $1
 
     # convert to video
-    ffmpeg -r 10 -ss 00:00:00 -i $1-%d.png -ss 00:00:04 -i JingleBells.m4a -shortest $1_raw.mp4
+    ffmpeg -r 10 -ss 00:00:00 -i $1-%02d.png -ss 00:00:04 -i JingleBells.m4a -shortest $1_raw.mp4
 
     # repair video
     HandBrakeCLI --crop 0:0:0:0 -i $1_raw.mp4 -o $1.mp4
@@ -49,10 +50,10 @@ repeatconvert(){
     rm $1.mp4
 
     # convert to png images
-    convert -density 160 extravaganza-intermission-$1.pdf $1.png
+    pdftoppm -png -r 240 extravaganza-intermission-$1.pdf $1
 
     # convert to video
-    ffmpeg -r 10 -ss 00:00:00 -i $1-%d.png -ss 00:00:04 -i JingleBells.m4a -shortest $1_raw.mp4
+    ffmpeg -r 10 -ss 00:00:00 -i $1-%03d.png -ss 00:00:04 -i JingleBells.m4a -shortest $1_raw.mp4
 
     # repair video
     HandBrakeCLI --crop 0:0:0:0 -i $1_raw.mp4 -o $1.mp4
@@ -71,15 +72,23 @@ repeatconvert(){
         
 }
 
-# Converting
-#convert2video NorthPole "North Pole"
-#convert2video almostsilentnight "(almost) Silent Night"
-#convert2video cello "Silent Night"
-#convert2video BrazilianFriend "Brazilian Friend"
-#convert2video wagner "Ride of the Valkyries"
-#convert2video mice "Merry Christmas"
-#convert2video finale "Grand Finale"
+# # Converting
+convert2video  "Come all ye faithful" 
+# convert2video graffiti "Bring on the music"
+# convert2video smurfs "Tribute to Vader Abraham (1953 -- 2022)"
+# convert2video truecolors "True colours"
+# convert2video Roma "C‘era una volta a Roma"
+convert2video  "Bee-lzebub"
+convert2video  "Upwards"
+# convert2video tugbonn "Commercial break"
+convert2video  "Silent Night"
+# convert2video Bear_Ante_Portas "SPQR"
+convert2video  "Some poetry - with apologies to J.R.R. Tolkien"
+# convert2video space "Pig in Space"
+# convert2video city-sleep "The city that never sleeps"
+convert2video  "Duck solidarity"
+# convert2video finale "Grand finale"
 
-repeatconvert title "../samcarter/title/extravaganza-titlepage.pdf" 100
-repeatconvert credits "../samcarter/title/extravaganza-credits.pdf" 150
+# repeatconvert title "./extravaganza-titlepage.pdf" 101
+# repeatconvert credits "./extravaganza-credits.pdf" 150
 
