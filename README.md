@@ -86,9 +86,7 @@ The full video is available from ...
 
 ## 11. Some poetry - with apologies to J.R.R. Tolkien
 
-<img align="right" src="./paulo/poetry/poetry.png" height="100">
-
-- Music: ...
+<img align="right" src="./paulo/poetry/ohh.png" height="100">
 
 - Source Code: [./paulo/poetry/](https://github.com/TikZlings/Extravaganza2022/tree/main/paulo/poetry)
 
