@@ -83,7 +83,7 @@ repeatconvert(){
 # convert2video beelzebub "Bee-lzebub"
 convert2video  "Upwards"
 # convert2video tugbonn "Commercial break"
-convert2video  "Silent Night"
+convert2video silentnight "Silent Night"
 # convert2video Bear_Ante_Portas "SPQR"
 # convert2video  poetry "Some poetry - with apologies to J.R.R. Tolkien"
 # convert2video space "Pig in Space"
