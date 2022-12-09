@@ -1,0 +1,15 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{tikz}
+\usepackage{pdfpages}
+\setbeamertemplate{navigation symbols}{}
+
+\begin{document}
+\foreach \z in {1,...,6}{
+\foreach \x in {1,...,28}{
+\foreach \y in {1,...,4}{
+  \includepdf[pages=\x]{silentnight}  
+}  
+}
+}
+\end{document}
