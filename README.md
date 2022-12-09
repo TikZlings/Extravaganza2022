@@ -46,11 +46,11 @@ The full video is available from ...
 
 ## 6. Bee-lzebub
 
-<img align="right" src="./ulrike/.../....png" height="100">
+<img align="right" src="./ulrike/beelzebub/beelzebub.png" height="100">
 
-- Music: ...
+- Music: https://www.youtube.com/watch?v=nkWR3F-W7YI
 
-- Source Code: [./ulrike/.../](https://github.com/TikZlings/Extravaganza2022/tree/main/ulrike/...)
+- Source Code: [./ulrike/beelzebub/](https://github.com/TikZlings/Extravaganza2022/tree/main/ulrike/beelzebub)
 
 ## 7. Upwards
 
@@ -70,11 +70,11 @@ The full video is available from ...
 
 ## 9. Silent Night
 
-<img align="right" src="./ulrike/.../....png" height="100">
+<img align="right" src="./ulrike/silentnight/silentnight.png" height="100">
 
-- Music: ...
+- Music: https://www.youtube.com/watch?v=TfqXl6lBDfI
 
-- Source Code: [./ulrike/.../](https://github.com/TikZlings/Extravaganza2022/tree/main/ulrike/...)
+- Source Code: [./ulrike/silentnight/](https://github.com/TikZlings/Extravaganza2022/tree/main/ulrike/silentnight)
 
 ## 10. SPQR
 

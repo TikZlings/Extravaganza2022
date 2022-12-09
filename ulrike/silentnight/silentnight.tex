@@ -4,7 +4,7 @@
 % arara: convert: {density: 160, otheroptions: -dispose previous -delay 10 -loop 0, format: gif}
 
 \PassOptionsToPackage{svgnames,x11names}{xcolor}
-\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 
 \usepackage{tikz}
 \usepackage{bbold}
@@ -21,7 +21,7 @@
 \makeatletter
 
 \newcommand{\mystar}{%
-    \pgfmathsetmacro\xposition{12.4*rnd}
+    \pgfmathsetmacro\xposition{16*rnd}
     \pgfmathsetmacro\yposition{4.5*rnd+4.5}
     \pgfmathsetmacro\starsize{1.8+1.5*rnd}
     \pgfmathsetmacro\starcolor{random(10,75)}
@@ -41,7 +41,7 @@
  \pgfmathsetseed{2}
  \foreach \x in {1,2,...,50}{\mystar}
  %\fill[white] (0,0) rectangle (\paperwidth,3.5cm);
- \fill[top color=white,bottom color=LightCyan3] plot[smooth,variable=\x,domain=-1:12.8,samples=82] ({\x},{3.8+0.3*sin(30*(\x-0.5*1/10))})--(12.8,0)--(0,0)--(-1,0);
+ \fill[top color=white,bottom color=LightCyan3] plot[smooth,variable=\x,domain=-1:16,samples=82] ({\x},{3.8+0.3*sin(30*(\x-0.5*1/10))})--(16,0)--(0,0)--(-1,0);
  \begin{scope}[xshift=1.5cm,yshift=3.6cm]
  \begin{scope}[scale=0.3]
  \filldraw[DarkGoldenrod4!50!black] (-.5,-.5) rectangle ++(1,1.5);
@@ -69,7 +69,7 @@
 \begin{document}
 \begin{frame}%[label=cello]
 \vspace*{2.5cm}
-\hspace*{4.3cm}
+\hspace*{5.3cm}
 \begin{tikzpicture}[scale=1.5]
 \anteater[santa=red!80!black]
 \foreach \x in {-10,...,3}{
