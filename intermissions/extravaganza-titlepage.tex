@@ -9,6 +9,20 @@ aspectratio=169
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{background canvas}{\includegraphics[height=\paperheight,width=\paperwidth]{extravaganza-intermission-background}}
 
+\makeatletter
+\def\battext{bat}
+\newcommand{\inserttikzlings}{
+  \foreach \x in \tikzlings@names@clist {
+    \ifx\x\battext
+    \else
+      \begin{tikzpicture}[scale=0.275]
+        \csname\x\endcsname
+      \end{tikzpicture}\hfill
+    \fi
+  }
+}
+\makeatother
+
 \begin{document}
 
 \begin{frame}[b]
@@ -20,11 +34,7 @@ aspectratio=169
 
 \hspace*{3cm}\tikz[rotate=-20,scale=0.275]{\bat}
 
-\hfill\foreach\x in {bear,coati,koala,bee,marmot,moles,mouse,owl,squirrel,penguin,sloth,sheep,snowman,duck,cat,hippo,panda,pig,rhino,anteater,bug,elephant,chicken,wolf}{%
-\begin{tikzpicture}[scale=0.275]
-\csname \x\endcsname
-\end{tikzpicture}\hfill
-}%
+\hfill\inserttikzlings
 
 \end{frame}
 
