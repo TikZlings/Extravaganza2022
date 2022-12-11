@@ -108,11 +108,11 @@ The full video is available from ...
 
 ## 14. Duck solidarity
 
-<img align="right" src="./ulrike/.../....png" height="100">
+<img align="right" src="./ulrike/solidarity/solidarity.png" height="100">
 
-- Music: ...
+- Music: https://vimeo.com/436097296
 
-- Source Code: [./ulrike/.../](https://github.com/TikZlings/Extravaganza2022/tree/main/ulrike/...)
+- Source Code: [./ulrike/solidarity/](https://github.com/TikZlings/Extravaganza2022/tree/main/ulrike/solidarity)
 
 ## 15. Grand finale
 

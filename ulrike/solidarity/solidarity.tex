@@ -18,6 +18,7 @@
 
 \begin{document}
 	
+% music 1:20-1:34 -> needs 14*25=350 frames
 \begin{frame}
   \begin{tikzpicture}[]
    \path[use as bounding box](0,0)rectangle (\textwidth,\textheight-14.7pt);
@@ -25,11 +26,11 @@
     \node[white,text width=.7\paperwidth,font=\tiny,align=center] at ([yshift=88mm]current page.south) {Image source: \url{https://commons.wikimedia.org/wiki/File:Venezia_Venice_summer_2019_147.jpg}};  
     
      
-    \path (\fpeval{130-\value{page}/200*150}mm,-0.1) pic[duck/grumpy]
+    \path (\fpeval{130-\value{page}/350*170}mm,-0.1) pic[duck/grumpy]
       {duck};
   
   \end{tikzpicture}
-  \pause[200]
+  \pause[350]
 \end{frame}	
 	\setbeamertemplate{background canvas}{%
       \includegraphics[trim=0cm 0cm 0cm 6cm,width=\paperwidth]{emptyroad}%
@@ -42,8 +43,8 @@
       \node[anchor=south,inner sep=0pt,opacity=\fpeval{(\value{page}-200)/40}]{\includegraphics[height=\paperheight,trim=0cm 4cm 0cm 0cm]{ducksmarch}};
       \end{tikzpicture}} }}} 
 
-
-\begin{frame}
+% music 1:34-1:53 -> needs 19*25=475 frames
+\begin{frame}[label=quack]
   \begin{tikzpicture}
   \path[use as bounding box](0,0)rectangle (\textwidth,\textheight-14.7pt);
 \node[white,text width=.7\paperwidth,font=\tiny,align=center] at ([yshift=88mm]current page.south) {Image source: \url{https://commons.wikimedia.org/wiki/File:Venezia_Venice_summer_2019_147.jpg}};  
@@ -51,9 +52,10 @@
 
     % credit for background image
     % \node[white,text width=.7\paperwidth,font=\tiny,align=center] at ([yshift=0.35cm]current page.south) {Image source: ??};  
-  \path (\fpeval{-10+(\value{page}-200)/600*130}mm,-0.1) pic[xscale=-1]
+  \path (\fpeval{-20+(\value{page}-200)/350*80}mm,-0.1) pic[xscale=-1]
       {duck};
   \end{tikzpicture}
-  \pause[250]
+  \pause[475]
 \end{frame}	
+
 \end{document}

@@ -88,7 +88,7 @@ convert2video silentnight "Silent Night"
 # convert2video  poetry "Some poetry - with apologies to J.R.R. Tolkien"
 # convert2video space "Pig in Space"
 # convert2video city-sleep "The city that never sleeps"
-convert2video  "Duck solidarity"
+convert2video solidarity "Duck solidarity"
 # convert2video finale "Grand finale"
 # repeatconvert credits "./extravaganza-credits.pdf" 150
 

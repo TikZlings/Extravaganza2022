@@ -56,8 +56,8 @@ cp ../intermissions/city-sleep.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
 cp ../ulrike/city-sleep/city-sleep.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
 
 # 14
-cp ../intermissions/xxx.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
-cp ../ulrike/xxx/xxx.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
+cp ../intermissions/solidarity.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
+cp ../ulrike/solidarity/solidarity.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
 
 # 15
 cp ../intermissions/xfinalexx.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
