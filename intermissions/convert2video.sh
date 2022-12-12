@@ -75,19 +75,19 @@ repeatconvert(){
 # Converting
 
 repeatconvert title "./extravaganza-titlepage.pdf" 101
-convert2video church "Come all ye faithful" 
-convert2video graffiti "Bring on the music"
+convert2video church "Come all the Faithful" 
+convert2video graffiti "Bring on the Music"
 convert2video smurfs "Tribute to Vader Abraham (1935 -- 2022)"
-convert2video truecolors "True colours"
+convert2video truecolors "True Colours"
 convert2video Roma "C‘era una volta a Roma"
 convert2video beelzebub "Bee-lzebub"
 convert2video upwards "Upwards"
-convert2video tugbonn "Commercial break"
+convert2video tugbonn "Commercial Break"
 convert2video silentnight "Silent Night"
 convert2video Bear_Ante_Portas "SPQR"
-convert2video poetry "Some poetry - with apologies to J.R.R. Tolkien"
+convert2video poetry "Some Poetry with Apologies"
 convert2video space "Pig in Space"
-convert2video city-sleep "The city that never sleeps"
-convert2video solidarity "Duck solidarity"
-convert2video finale "Grand finale"
+convert2video city-sleep "The City that never sleeps"
+convert2video solidarity "Duck Solidarity"
+convert2video finale "Grand Finale"
 repeatconvert credits "./extravaganza-credits.pdf" 150
