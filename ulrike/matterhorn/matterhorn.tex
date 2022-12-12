@@ -17,7 +17,7 @@
   {Matterhorn-EastAndNorthside-viewedFromZermatt_landscapeformat-2}}}
 
 %\newcommand\calcpos[1]{\fpeval{(trunc(\value{page}/4))/200*22+#1}cm}
-\newcommand\calcpos[1]{\fpeval{(\value{page})/200*22+#1}cm}
+\newcommand\calcpos[1]{\fpeval{(\value{page})/800*22+#1}cm}
 \begin{document}
 	
 %\end{document}
@@ -27,14 +27,14 @@
   decoration={
   markings,
   %mark= at position 0cm with {\node{\includegraphics[scale=0.2]{duck}};},
-   mark= at position \calcpos{1.8}
-    with {\node{\includegraphics[scale=0.35,page=2]{duck}};},  
-    mark= at position \calcpos{1.2}
-    with {\node{\includegraphics[scale=0.25]{duck}};},
+    mark= at position \calcpos{0}
+    with {\node{\includegraphics[scale=0.3]{duck}};}, 
   mark= at position \calcpos{0.6}
-    with {\node{\includegraphics[scale=0.25,page=2]{duck}};}, 
-  mark= at position \calcpos{0}
-    with {\node{\includegraphics[scale=0.35]{duck}};}, 
+    with {\node{\includegraphics[scale=0.23,page=2]{duck}};}, 
+    mark= at position \calcpos{1.2}
+    with {\node{\includegraphics[scale=0.23]{duck}};},
+     mark= at position \calcpos{1.8}
+    with {\node{\includegraphics[scale=0.3,page=2]{duck}};},    
   %mark= at position 22cm with {\node{\includegraphics[scale=0.2]{duck}};}
   }
   ]
@@ -64,7 +64,7 @@
      ([yshift=0.35cm]current page.south) {Image source: \url{https://commons.wikimedia.org/wiki/File:Matterhorn-EastAndNorthside-viewedFromZermatt_landscapeformat-2.jpg}};  
     
   \end{tikzpicture}
-  \pause[190]
+  \pause[769]
 \end{frame}	
 	
 \end{document}
