@@ -2,8 +2,8 @@
 
 % slow play!
 % music:
-% 1:12 - 1:50
-% https://www.bing.com/videos/search?q=conquest+of+paradise&&view=detail&mid=280EDC4D76B0B64862CB280EDC4D76B0B64862CB&&FORM=VRDGAR
+% 0:00 - 0:30
+% https://www.youtube.com/watch?v=WYeDsa4Tw0c&t=5s
  
 \documentclass[aspectratio=169]{beamer}
 
@@ -21,17 +21,18 @@
 	
 %\end{document}
 \begin{frame}
-  \begin{tikzpicture}[%remember picture,
+  \begin{tikzpicture}[%
+  remember picture,
   decoration={
   markings,
   %mark= at position 0cm with {\node{\includegraphics[scale=0.2]{duck}};},
-   mark= at position \fpeval{(\value{page})/200*22+1.8}cm 
+   mark= at position \fpeval{(\value{page})/800*22+1.8}cm 
     with {\node{\includegraphics[scale=0.35,page=2]{duck}};},  
-    mark= at position \fpeval{(\value{page})/200*22+1.2}cm 
+    mark= at position \fpeval{(\value{page})/800*22+1.2}cm 
     with {\node{\includegraphics[scale=0.25]{duck}};},
-  mark= at position \fpeval{(\value{page})/200*22+0.6}cm 
+  mark= at position \fpeval{(\value{page})/800*22+0.6}cm 
     with {\node{\includegraphics[scale=0.25,page=2]{duck}};}, 
-  mark= at position \fpeval{(\value{page})/200*22}cm 
+  mark= at position \fpeval{(\value{page})/800*22}cm 
     with {\node{\includegraphics[scale=0.35]{duck}};}, 
   %mark= at position 22cm with {\node{\includegraphics[scale=0.2]{duck}};}
   }
@@ -58,11 +59,11 @@
    -- (6.4,6.8);
     
     % credit for background image
-    \node[white,text width=.7\paperwidth,font=\tiny,align=center] at 
-     ([yshift=0]current page.south) {Image source: \url{https://commons.wikimedia.org/wiki/File:Matterhorn-EastAndNorthside-viewedFromZermatt_landscapeformat-2.jpg}};  
+    \node[font=\tiny,align=center] at 
+     ([yshift=0.35cm]current page.south) {Image source: \url{https://commons.wikimedia.org/wiki/File:Matterhorn-EastAndNorthside-viewedFromZermatt_landscapeformat-2.jpg}};  
     
   \end{tikzpicture}
-  \pause[190]
+  \pause[769]
 \end{frame}	
 	
 \end{document}

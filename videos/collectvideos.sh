@@ -28,12 +28,12 @@ cp ../intermissions/beelzebub.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
 cp ../ulrike/beelzebub/beelzebub.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
 
 # 7
-cp ../intermissions/xxx.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
-cp ../ulrike/xxx/xxx.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
+cp ../intermissions/upwards.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
+cp ../ulrike/matterhorn/matterhorn.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
 
 # 8
 cp ../intermissions/tugbonn.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
-cp ../ulrike/tugbonn/tugbonn.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
+cp ../ulrike/tugbonn/bear-bonn.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
 
 # 9
 cp ../intermissions/silentnight.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
@@ -60,7 +60,7 @@ cp ../intermissions/solidarity.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
 cp ../ulrike/solidarity/solidarity.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
 
 # 15
-cp ../intermissions/xfinalexx.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
+cp ../intermissions/finale.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
 cp ../ulrike/finale/finale.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;
 
 cp ../intermissions/credits.mp4 $COUNTER.mp4 ; COUNTER=$((COUNTER+1)) ;

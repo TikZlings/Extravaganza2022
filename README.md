@@ -1,6 +1,6 @@
 # The Great TikZlings Christmas Extravaganza 2022
 
-This repository contains the souce code of the Great TikZlings Extravanganza 2022, created by ...
+This repository contains the source code of the Great TikZlings Extravanganza 2022, created by [Ulrike](https://github.com/u-fischer) & [Gert Fischer](https://github.com/g-fischer), [Carla Maggi](https://github.com/CarLaTeX), [Paulo Cereda](https://github.com/cereda) and [samcarter](https://github.com/samcarter).
 
 The full video is available from ...
 
@@ -54,11 +54,11 @@ The full video is available from ...
 
 ## 7. Upwards
 
-<img align="right" src="./ulrike/.../....png" height="100">
+<img align="right" src="./ulrike/matterhorn/matterhorn.png" height="100">
 
-- Music: ...
+- Music: https://www.youtube.com/watch?v=WYeDsa4Tw0c
 
-- Source Code: [./ulrike/.../](https://github.com/TikZlings/Extravaganza2022/tree/main/ulrike/...)
+- Source Code: [./ulrike/matterhorn/](https://github.com/TikZlings/Extravaganza2022/tree/main/ulrike/matterhorn)
 
 ## 8. Commercial break
 
