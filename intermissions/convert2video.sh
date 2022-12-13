@@ -75,7 +75,7 @@ repeatconvert(){
 # Converting
 
 repeatconvert title "./extravaganza-titlepage.pdf" 101
-convert2video church "Come all the Faithful" 
+convert2video church "Come All Ye Faithful" 
 convert2video graffiti "Bring on the Music"
 convert2video smurfs "Tribute to Vader Abraham (1935 -- 2022)"
 convert2video truecolors "True Colours"

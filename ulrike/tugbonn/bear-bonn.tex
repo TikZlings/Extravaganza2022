@@ -19,7 +19,7 @@
 \begin{document}
 \begin{frame}
 \hspace*{\dimexpr-1in+\oddsidemargin}%
-\begin{tikzpicture}[] \path[use as 
+\begin{tikzpicture}[remember picture] \path[use as 
 bounding box](0,0)--(\textwidth,\textheight-14.7pt); 
 
 \node[anchor=south west,font=\large] at (0.85\textwidth, -0.15\textheight)
@@ -52,9 +52,13 @@ signback=green!40!black]\bearwear[body deco=
   {\includegraphics[trim=0cm 25pt 0pt 0pt,clip,width=0.6cm]{kussmund}};
 }]
 
+
 \end{scope}
 \end{scope}
 
+\begin{scope}[use page relative coordinates]
+\node[font=\tiny,anchor=east,rotate=90] at (.01,.999) {Background image: Copyright Bundesstadt Bonn};
+\end{scope}
 
 \end{tikzpicture}
 \pause[600]
