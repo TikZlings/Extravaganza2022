@@ -2,7 +2,7 @@
 rm Roma.mp4
 
 # convert to png images
-pdftoppm -png -r 240 Roma_repeat.pdf Roma
+pdftoppm -png -r 240 -progress Roma_repeat.pdf Roma
 
 # convert to video
 ffmpeg -ss 00:00:00 -i Roma-%03d.png -ss 00:00:27 -i Italienische_Nationalhymne-0WXYviTa_X0.m4a -shortest Roma_raw.mp4

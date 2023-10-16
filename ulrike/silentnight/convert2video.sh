@@ -2,7 +2,7 @@
 rm silentnight.mp4
 
 # convert to png images
-pdftoppm -png -r 240 silentnight_repeat.pdf silentnight
+pdftoppm -png -r 240 -progress silentnight_repeat.pdf silentnight
 
 # convert to video
 ffmpeg  -ss 00:00:00 -i silentnight-%03d.png -ss 00:00:10 -i Silent_Night_Jimi_Hendrix_Mix_-_Diane_di_Stasio-TfqXl6lBDfI.m4a -shortest silentnight_raw.mp4

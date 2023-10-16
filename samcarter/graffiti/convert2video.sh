@@ -2,10 +2,10 @@
 rm graffiti1.mp4
 
 # convert to png images
-pdftoppm -png -r 240 graffiti.pdf graffiti
+pdftoppm -png -r 240 -progress graffiti.pdf graffiti
 
 # convert to video
-ffmpeg  -ss 00:00:00 -i graffiti-%03d.png -ss 00:00:00 -i footsteps-on-pebbles-sound-effect.mp3 -shortest graffiti1_raw.mp4
+ffmpeg  -ss 00:00:00 -i graffiti-%03d.png -ss 00:00:00 -i footsteps-on-pebbles-sound-effect.m4a -shortest graffiti1_raw.mp4
 
 # repair video
 HandBrakeCLI --crop 0:0:0:0  -i graffiti1_raw.mp4 -o graffiti1.mp4
@@ -23,10 +23,10 @@ open graffiti1.mp4
 rm graffiti2.mp4
 
 # convert to png images
-pdftoppm -png -r 240 graffiti2.pdf graffiti2
+pdftoppm -png -r 240 -progress graffiti2.pdf graffiti2
 
 # convert to video
-ffmpeg  -ss 00:00:00 -i graffiti2-%03d.png -ss 00:00:00 -i Richard_Strauss_Don_Juan_excerpt.mp3 -shortest graffiti2_raw.mp4
+ffmpeg  -ss 00:00:00 -i graffiti2-%03d.png -ss 00:00:00 -i Richard_Strauss_Don_Juan_excerpt.m4a -shortest graffiti2_raw.mp4
 
 # repair video
 HandBrakeCLI --crop 0:0:0:0  -i graffiti2_raw.mp4 -o graffiti2.mp4

@@ -2,7 +2,7 @@
 rm matterhorn.mp4
 
 # convert to png images
-pdftoppm -png -r 240 matterhorn.pdf matterhorn
+pdftoppm -png -r 240 -progress matterhorn.pdf matterhorn
 
 # convert to video
 ffmpeg  -ss 00:00:00 -i matterhorn-%03d.png -ss 00:01:20 -i Vangelis_-_Conquest_of_paradise-WYeDsa4Tw0c.m4a -shortest matterhorn_raw.mp4

@@ -2,7 +2,7 @@
 rm solidarity.mp4
 
 # convert to png images
-pdftoppm -png -r 240 solidarity.pdf solidarity
+pdftoppm -png -r 240 -progress solidarity.pdf solidarity
 
 # convert to video
 ffmpeg  -ss 00:00:00 -i solidarity-%03d.png -ss 00:01:20 -i Gerry_The_Pacemakers_-_You_ll_Never_Walk_Alone_Official_Video-436097296.m4a -shortest solidarity_raw.mp4

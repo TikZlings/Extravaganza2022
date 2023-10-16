@@ -2,7 +2,7 @@
 rm smurfs.mp4
 
 # convert to png images
-pdftoppm -png -r 240 smurfs.pdf smurfs
+pdftoppm -png -r 240 -progress smurfs.pdf smurfs
 
 # convert to video
 ffmpeg  -ss 00:00:00 -i smurfs-%03d.png -ss 00:00:47 -i The_Smurf_Song_-_Father_Abraham-1oofM5ttD6c.m4a -shortest smurfs_raw.mp4

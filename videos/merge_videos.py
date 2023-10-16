@@ -60,7 +60,7 @@ for video in video_clips[0:2]:
 merged_video = CompositeVideoClip(video_fx_list)
 duration = merged_video.end
 
-audioclip = AudioFileClip("../intermissions/JingleBells.m4a").subclip(2,duration+2)
+audioclip = AudioFileClip("../intermissions/christmas-music-box-music.m4a").subclip(2,duration+2)
 merged_video = merged_video.set_audio(audioclip)
 
 ################################################################################
@@ -84,5 +84,5 @@ for video in video_clips[2:]:
 final_video = CompositeVideoClip(video_fx_list)
 final_video.write_videofile("Extravaganza_raw.mp4") 
 
-os.system("HandBrakeCLI --crop 0:0:0:0 -i Extravaganza_raw.mp4 -o Extravaganza.mp4") 
+os.system("HandBrakeCLI --crop 0:0:0:0 -i Extravaganza_raw.mp4 -o Extravaganza_2022.mp4") 
 os.system("rm Extravaganza_raw.mp4")
